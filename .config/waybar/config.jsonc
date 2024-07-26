@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "reload_style_on_change": true,
-  "modules-left": ["sway/workspaces", "mpris"],
+  "modules-left": ["sway/workspaces", "mpris", "sway/mode"],
   "modules-right": ["tray", "custom/audio_idle_inhibitor", "sway/language", "bluetooth", "pulseaudio", "backlight", "network", "battery", "clock", "custom/power"],
   "clock": {
     "tooltip-format": "<big>󰸗  {:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
