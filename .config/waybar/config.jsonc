@@ -1,12 +1,11 @@
 {
   "layer": "top",
   "reload_style_on_change": true,
-  "modules-left": ["sway/workspaces", "sway/mode", "mpris"],
-  // "modules-center": ["tray"],
-  "modules-right": ["sway/language", "bluetooth", "pulseaudio", "backlight", "network", "battery", "clock"],
+  "modules-left": ["sway/workspaces", "mpris"],
+  "modules-right": ["tray", "custom/audio_idle_inhibitor", "sway/language", "bluetooth", "pulseaudio", "backlight", "network", "battery", "clock", "custom/power"],
   "clock": {
     "tooltip-format": "<big>󰸗  {:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "󰅐 {:%b %d %H:%M}"
+    "format": "󰅐 {:%a, %b %d %H:%M}"
   },
   "backlight": {
     "format": " {icon}  {percent}%",
@@ -56,7 +55,7 @@
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤨"]
   },
   "sway/workspaces": {
-    "disable-scroll": true
+    "disable-scroll": false
   },
   "sway/language": {
     "format": "󰗊 {short}",
@@ -64,10 +63,11 @@
     "tooltip-format": "{long}"
   },
   "mpris": {
-    "format": "{status_icon} | {player_icon} {dynamic}",
+    "format": "{player_icon} | {status_icon} {dynamic}",
     "tooltip-format": "{status_icon} | {player_icon} {dynamic}",
 //    "tooltip-format-paused": "{status_icon} | {player_icon} {dynamic}",
     "dynamic-order": ["title", "artist"],
+    "dynamic-separator": " • ",
     "tooltip": true,
     "player-icons": {
       "spotify": "󰓇",
@@ -84,9 +84,14 @@
       "stopped": "󰓛"
     }
   },
+  "custom/power": {
+    "format" : "󰐥",
+		"tooltip": false,
+		"on-click": "swaynag -t warning -m 'Power Menu Options' -b 'Shutdown' 'shutdown -h now' -b 'Restart' 'shutdown -r now' -b 'Logout' 'swaymsg exit' --background=#FDD633 --button-background=#009999 --button-border=#002b33 --border-bottom=#002b33 --button-padding 6"
+  },
   "tray": {
     "show-passive-items": false,
-    "icon-size": 12,
+    "icon-size": 16,
     "spacing": 10
   },
   "bluetooth": {
@@ -102,5 +107,19 @@
     "tooltip-format-connected": "{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%"
-  }
+  },
+  "custom/audio_idle_inhibitor": {
+		"format": "{icon}",
+    "tooltip": true,
+    "tooltip-format": "Idle inhibitor",
+		"exec": "sway-audio-idle-inhibit --dry-print-both-waybar",
+		"exec-if": "which sway-audio-idle-inhibit",
+		"return-type": "json",
+		"format-icons": {
+			"output": "",
+			"input": "",
+			"output-input": "",
+			"none": ""
+		}
+	}
 }
