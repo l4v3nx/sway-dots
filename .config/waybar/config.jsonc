@@ -2,6 +2,7 @@
   "layer": "top",
   "reload_style_on_change": true,
   "modules-left": ["sway/workspaces", "mpris", "sway/mode"],
+  "modules-center": ["sway/window"],
   "modules-right": ["tray", "custom/audio_idle_inhibitor", "sway/language", "pulseaudio", "backlight", "battery", "network", "bluetooth", "clock", "custom/power"],
   "clock": {
     "tooltip-format": "<big>󰸗  {:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
@@ -53,6 +54,11 @@
     "on-click": "if [[ $(nmcli radio wifi) == 'enabled' ]]; then nmcli radio wifi off; else nmcli radio wifi on; fi",
     "on-click-right": "env XDG_CURRENT_DESKTOP='gnome' gnome-control-center wifi",
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤨"]
+  },
+  "sway/window": {
+    "max-length": 70,
+    "tooltip": false,
+    "tooltip-format": "{app_id} ({shell})"
   },
   "sway/workspaces": {
     "disable-scroll": false

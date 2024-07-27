@@ -17,6 +17,9 @@ window#waybar {
   transition-property: background-color;
   transition-duration: 0.5s;
 }
+window#waybar.empty #window {
+  background-color: transparent;
+}
 
 widget > * {
   margin-top: 8px;
@@ -64,6 +67,13 @@ tooltip label {
   animation-direction: alternate;
 }
 
+#window {
+  padding: 0 8px;
+  border-radius: 8px;
+  color: @accent_bg_color;
+  background-color: @headerbar_border_color;
+}
+
 #mode {
   padding: 0 8px;
   margin-left: 6px;
@@ -71,7 +81,6 @@ tooltip label {
   background-color: @accent_bg_color;
   color: @accent_fg_color;
 }
-
 
 #battery {
   padding: 0 6px;
@@ -116,10 +125,10 @@ tooltip label {
 }
 
 #custom-media {
-  color: @accent_bg_color;
-  background-color: @headerbar_border_color;
   padding: 0 12px;
   border-radius: 8px;
+  color: @accent_bg_color;
+  background-color: @headerbar_border_color;
 }
 
 #custom-audio_idle_inhibitor {
