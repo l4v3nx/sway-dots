@@ -68,7 +68,7 @@ tooltip label {
 }
 
 #window {
-  padding: 0 8px;
+  padding: 0 12px;
   border-radius: 8px;
   color: @accent_bg_color;
   background-color: @headerbar_border_color;
@@ -109,7 +109,7 @@ tooltip label {
 }
 
 #tray {
-  padding: 0 12px;
+  padding: 0 8px;
   padding-bottom: 8px;
   border-radius: 8px;
   background-color: @headerbar_border_color;
@@ -140,7 +140,7 @@ tooltip label {
 
 #custom-power {
   font-size: 18px;
-  padding: 0 12px;
+  padding: 0 8px;
   padding-top: 2px;
   border-radius: 8px;
   margin-right: 10px;
