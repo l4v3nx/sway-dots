@@ -75,6 +75,7 @@
 //    "tooltip-format-paused": "{status_icon} | {player_icon} {dynamic}",
     "dynamic-order": ["title", "artist"],
     "dynamic-separator": " • ",
+    "title-len": 50,
     "tooltip": true,
     "player-icons": {
       "spotify": "󰓇",
