@@ -19,7 +19,7 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 0 12px;
+  padding: 0 8px;
   margin-right: 6px;
   color: @accent_bg_color;
   background-color: @headerbar_border_color;
@@ -42,20 +42,15 @@ window#waybar {
 }
 
 widget > * {
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .modules-left > widget > * {
-  margin-left: 12px;
-  margin-right: 0;
-}
-
-.modules-left > widget:first-child > * {
-  margin-left: 8px;
+  margin-left: 10px;
 }
 
 .modules-right > widget > * {
-  padding: 0 12px;
+  padding: 0 8px;
   color: @accent_bg_color;
   background-color: @headerbar_border_color;
 }
@@ -91,13 +86,14 @@ widget > * {
 }
 
 #clock {
+  padding-right: 10px;
   border-radius: 0 8px 8px 0;
   margin-right: 6px;
 }
 
 #mpris {
   margin-left: 0px;
-  padding: 0 12px;
+  padding: 0 8px;
   border-radius: 8px;
   color: @accent_bg_color;
   background-color: @headerbar_border_color;
@@ -114,9 +110,14 @@ tooltip label {
 
 #tray {
   padding: 0 12px;
-  padding-bottom: 6px;
+  padding-bottom: 8px;
   border-radius: 8px;
   background-color: @headerbar_border_color;
+}
+
+#bluetooth {
+  padding-left: 6px;
+  padding-right: 4px;
 }
 
 #pulseaudio {
@@ -131,6 +132,7 @@ tooltip label {
 }
 
 #custom-audio_idle_inhibitor {
+  padding-left: 10px;
   padding-right: 18px;
   border-radius: 8px 0 0 8px;
   margin-left: 6px;
