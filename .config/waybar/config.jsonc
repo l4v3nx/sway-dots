@@ -43,14 +43,14 @@
     "on-click-right": "pavucontrol"
   },
   "network": {
-    "format": "{ifname}",
+    "format": "󰌗",
     "format-wifi": "{icon} {signalStrength}%",
     "format-ethernet": "󰈀  {ipaddr}",
-    "format-disconnected": "󰲜  Disconnected",
-    // "tooltip-format": "{ifname} via {gwaddr}",
+    "format-disconnected": "󰤮",
+    "tooltip-format": "No connection",
     "tooltip-format-wifi": "󰖩  {essid} ({ifname})",
     "tooltip-format-ethernet": "󰈀  {ifname}",
-    // "tooltip-format-disconnected": "󰲜  Disconnected",
+    "tooltip-format-disconnected": "Disconnected",
     "max-length": 30,
     "on-click": "if [[ $(nmcli radio wifi) == 'enabled' ]]; then nmcli radio wifi off; else nmcli radio wifi on; fi",
     "on-click-right": "env XDG_CURRENT_DESKTOP='gnome' gnome-control-center wifi",
